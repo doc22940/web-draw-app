@@ -1,0 +1,82 @@
+html,body{
+	background-color:#ffffff;
+	height:100%;
+	margin:0px;
+}
+
+#banner{
+	height:8%;
+	width:100%;
+	background-color:#000000;
+	margin:0 auto;
+}
+
+#banner_image{
+	height:100%;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#eyes{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#content{
+	width:100%;
+	height:82%;
+	margin:0px;
+	overflow:hidden;
+}
+
+#ferro{
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+#new{
+	height:80%;
+}
+#save{
+	height:80%;
+}
+
+
+#foot{
+	height:60px;
+	position:relative;
+}
+
+.button{
+	float:left;
+}
+
+.color{
+	float:left;
+}
+.size{
+	margin-top:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

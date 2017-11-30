@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/fabric.min.js" type="text/javascript"></script>
+<script src="js/eyes.js" type="text/javascript"></script>
+<script src="js/jquery.wheelmenu.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/wheelmenu.css">
+<style>
+    a {
+      text-decoration: none;
+    }
+
+    .wheel-button, .wheel-button:visited {
+	  position: absolute;
+	  z-index: 1;	
+      line-height: 35px;
+      font-weight: bold;
+      font-size: 36px;
+      background: #df4727; 
+      padding: 10px 11px;
+      text-align: center;
+      border-radius: 50px;
+      width: 35px;
+      height: 35px;
+      color: white;
+      display: block;
+      margin: 10px 20px;	
+      border: 3px solid #92311e;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+      -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+      -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    }
+
+    .wheel-button:hover{ 
+      color: white;
+    }
+    
+    
+
+    .wheel-button span, .wheel span{
+      position: relative;
+      -moz-transition: all 1s ease;
+      -webkit-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+      display: block;
+    }
+
+    .wheel-button.active span{
+      transform: rotate(135deg);
+      -ms-transform: rotate(135deg); /* IE 9 */
+      -webkit-transform: rotate(135deg); /* Safari and Chrome */
+    }
+
+    .wheel li a, .wheel li a:visited{
+      background: rgba(0,0,0,0.65);
+      border-radius: 50px;
+      font-weight: bold;
+      padding: 10px;
+      text-align: center;
+      width: 20px;
+      height: 20px;
+      border: 1px solid black;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.5);
+      -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.5);
+      -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.5);
+      color: white;
+      -moz-transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease;
+      -o-transition: all 0.25s ease;
+      transition: all 0.25s ease;
+    }
+
+    .wheel li a:hover{
+      background: rgba(0,0,0,0.8);
+    }
+
+
+    
+
+</style>
+
+</head>
+<body>
+<div id="banner">
+
+	<canvas id="eyes"></canvas>
+  
+	<input id="banner_image" type="image" src="images/kid.png"/>
+	
+	
+<!--
+	<input id="banner_image" type="image"src="images/banner.png"/>
+	<input id="new" type="image"src="images/new_1.png"/>
+	<a id="a_save" download='fundraw.png'><input id="save" type="image" src="images/save_1.png"/></a>
+-->	
+
+</div>
+<div id="content">
+	
+		<a href="#wheell" class="wheel-button ne">
+			<span>+</span>
+		</a>
+		<ul id="wheell" class="wheel">
+		  <li class="item"><a id="freedraw"><i id="icon_sketch" style="margin-top:26%;" class="fa fa-paint-brush"></i></a></li>
+		  <li class="item"><a id="eraser"><i style="margin-top:26%;" class="fa fa-eraser"></i></a></li>
+		  <li class="item"><a id="save" href="" download><i style="margin-top:26%;" class="fa fa-floppy-o"></i></a></li>
+		</ul>
+	
+	
+		<canvas id="canvas"/>
+</div>
+<div id="foot">
+	<div style="height:100%;width:360px;margin:0 auto;">
+		<img id="black" class="color" src="images/black_selected.png" style="align:center;"/>
+		<img id="brown" class="color" src="images/brown_unselected.png" style="align:center;"/>
+		<img id="blue" class="color" src="images/blue_unselected.png" style="align:center;"/>
+		<img id="green" class="color" src="images/green_unselected.png" style="align:center;"/>
+		<img id="orange" class="color" src="images/orange_unselected.png" style="align:center;"/>
+		<img id="red" class="color" src="images/red_unselected.png" style="align:center;"/>
+		<img id="yellow" class="color" src="images/yellow_unselected.png" style="align:center;"/>
+		<img id="grey" class="color" src="images/grey_unselected.png" style="align:center;"/>
+	<img id="purple" class="color" src="images/purple_unselected.png" style="align:center;"/>
+	</div>
+<!--
+		<a href="color.html"><img style="margin-left:40%;border:0;"class="button" id="funcolor" src="images/funcolor1.png"/></a>
+-->		
+</div>
+
+
+</body>
+<script src="main.js" type="text/javascript"></script>
+</html>
